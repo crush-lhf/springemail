@@ -36,8 +36,8 @@ public class SpringMailConfig {
 
     }
 
-    @Bean(name="test")
+    @Bean(name = "test")
     public Main main() {
-        return new Main((JavaMailSenderImpl) getJavaMailSender());
+        return new Main(getJavaMailSender() instanceof JavaMailSenderImpl ? (JavaMailSenderImpl) getJavaMailSender() : null);
     }
 }
