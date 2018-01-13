@@ -11,8 +11,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ConfigutionTest {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringMailConfig.class);
-        Main c = ctx.getBean("test", Main.class);
-        System.out.println("" + c);
+        Main c = ctx.getBean("test", Main.class);//初始化时执行发送功能
+        //System.out.println("" + c);
 
     }
 }
